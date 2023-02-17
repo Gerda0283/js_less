@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 07</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+    <script>
+
+      // Константи
+      const MONTH_MIN = 1;
+      const MONTH_MAX = 12;
+      const DAY_MIN = 0;
+      const DAY_MAX = 6;
+
+      // Розв'язання
+      const monthRandom = Math.floor(Math.random() * (MONTH_MAX - MONTH_MIN + 1) + MONTH_MIN);
+      console.log(`Задача 7: Випадковий місяць номер ${monthRandom}`);
+
+      const dayRandom = Math.floor(Math.random() * (DAY_MAX - DAY_MIN + 1) + DAY_MIN);
+      console.log(`Задача 7: Випадковий день номер ${dayRandom}`);
+      const monthAndDaySum = monthRandom + dayRandom;
+      console.log(`Задача 7 (Відповідь): Сума випадкового місяця і випадкового дня = ${monthAndDaySum}`);
+
+    </script>
+
+  </head>
+  <body>
+    <h1>Задача 7:</h1>
+    <p>Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</p>
+    <p>Відповіді дивитись у консолі</p>
+
+<a href="/lesson_2/index.html">Назад: до списку задач 2-го уроку</a>
+</body>
+</html>

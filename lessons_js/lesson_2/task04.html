@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 04</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+    <script>
+
+      // Умова
+      let lengthInCm = Math.abs(parseFloat(prompt('Задача 4: Довжина у сантиметрах =', 'number')));
+      console.log(`Задача 4: ${lengthInCm} см`);
+
+      // Розв'язання
+      let lengthInM = (lengthInCm / 100).toFixed(4);
+      console.log(`Задача 4 (Відповідь): ${lengthInCm} см = ${lengthInM} м`);
+
+      let lengthInKm = (lengthInCm / 100000).toFixed(4);
+      console.log(`Задача 4 (Відповідь): ${lengthInCm} см = ${lengthInKm} км`);
+
+    </script>
+
+  </head>
+  <body>
+    <h1>Задача 4:</h1>
+    <p>Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+    <p>Відповіді дивитись у консолі</p>
+
+<a href="/lesson_2/index.html">Назад: до списку задач 2-го уроку</a>
+</body>
+</html>

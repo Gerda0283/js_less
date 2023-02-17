@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 06</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+  </head>
+  <body>
+    <h1>Задача 6:</h1>
+    <p>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+
+    <h2>Відповідь:</h2>
+    <table cellspacing="1" class="page__table">
+      <tr class="page__tr">
+        <th class="page__th">товар</th>
+        <th class="page__th">Вартість одиниці</th>
+        <th class="page__th">Кількість</th>
+        <th class="page__th">Загальна вартість</th>
+      </tr>
+      <tr class="page__tr">
+        <td class="page__td page__item"><b>товар 1</b></td>
+        <td class="page__td page__price1"></td>
+        <td class="page__td page__quantity1"> </td>
+        <td class="page__td page__total1"></td>
+      </tr>
+      <tr class="page__tr">
+        <td class="page__td page__item"><b>товар 2</b></td>
+        <td class="page__td page__price2"></td>
+        <td class="page__td page__quantity2"> </td>
+        <td class="page__td page__total2"></td>
+      </tr>
+      </tr>
+      <tr class="page__tr">
+        <td class="page__td page__item"><b>товар 3</b></td>
+        <td class="page__td page__price3"></td>
+        <td class="page__td page__quantity3"> </td>
+        <td class="page__td page__total3"></td>
+      </tr>
+      <tr class="page__tr">
+        <td colspan="3" class="page__td page__item"><b>Чек</b></td>
+        <td class="page__td page__total-sum"></td>
+      </tr>
+    </table>
+
+    <a href="/lesson_2/index.html">Назад: до списку задач 2-го уроку</a>
+
+    <script>
+
+      // Задача 6 Умова
+      const priceOne = document.querySelector('.page__price1');
+      const priceTwo = document.querySelector('.page__price2');
+      const priceThree = document.querySelector('.page__price3');
+
+      const quentityOne = document.querySelector('.page__quantity1');
+      const quentityTwo = document.querySelector('.page__quantity2');
+      const quentityThree = document.querySelector('.page__quantity3');
+
+      const totalOne = document.querySelector('.page__total1');
+      const totalTwo = document.querySelector('.page__total2');
+      const totalThree = document.querySelector('.page__total3');
+
+      const checkout = document.querySelector('.page__total-sum');
+
+      // Розв'язання
+
+      let priceOfItemFirst = Math.abs(parseFloat(prompt('Задача 6: ціна товару А =', 'number')));
+      priceOne.textContent = priceOfItemFirst;
+      let quantityOfItemFirst = Math.abs(parseFloat(prompt('Задача 6: кількість товару А =', 'number')));
+      quentityOne.textContent = quantityOfItemFirst;
+
+      let priceOfItemSecond = Math.abs(parseFloat(prompt('Задача 6: ціна товару В =', 'number')));
+      priceTwo.textContent = priceOfItemSecond;
+      let quantityOfItemSecond = Math.abs(parseFloat(prompt('Задача 6: кількість товару В =', 'number')));
+      quentityTwo.textContent = quantityOfItemSecond;
+
+      let priceOfItemThird = Math.abs(parseFloat(prompt('Задача 6: ціна товару С =', 'number')));
+      priceThree.textContent = priceOfItemThird
+      let quantityOfItemThird = Math.abs(parseFloat(prompt('Задача 6: кількість товару С =', 'number')));
+      quentityThree.textContent = quantityOfItemThird;
+
+      let costOfItemFirst = priceOfItemFirst * quantityOfItemFirst;
+      totalOne.textContent = costOfItemFirst.toFixed(2);
+
+      let costOfItemSecond = priceOfItemSecond * quantityOfItemSecond;
+      totalTwo.textContent = costOfItemSecond.toFixed(2);
+
+      let costOfItemThird = priceOfItemThird * quantityOfItemThird;
+      totalThree.textContent = costOfItemThird.toFixed(2);
+
+      let totalCost = costOfItemFirst + costOfItemSecond + costOfItemThird;
+      checkout.textContent = totalCost;
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 01</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+  </head>
+  <body>
+    <h1>Задача 1:</h1>
+    <p>Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</p>
+
+    <table cellspacing="1" class="page__table">
+      <tr class="page__tr">
+        <th class="page__th">сума</th>
+        <th class="page__th">добуток</th>
+        <th class="page__th">частка</th>
+      </tr>
+      <tr class="page__tr">
+        <td class="page__td page__sum"></td>
+        <td class="page__td page__product"> </td>
+        <td class="page__td page__quotient"></td>
+      </tr>
+    </table>
+    <a href="/lesson_2/index.html">Назад: до списку задач 2-го уроку</a>
+
+    <script>
+
+      // Умова
+      const sum = document.querySelector('.page__sum');
+      const product = document.querySelector('.page__product');
+      const quotient = document.querySelector('.page__quotient');
+
+      // Розв'язання
+      let d = parseFloat(prompt('Задача 1: d =', 'number'));
+      let e = parseFloat(prompt('Задача 1: e =', 'number'));
+
+      let resultSum = (d + e).toFixed(2);
+      sum.textContent = resultSum;
+
+      let resultProduct = (d * e).toFixed(2);;
+      product.textContent = resultProduct;
+
+      let resultQuotient = (d / e).toFixed(2);
+      quotient.textContent = resultQuotient;
+
+    </script>
+
+  </body>
+
+</html>
