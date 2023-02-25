@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 04</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+    <script>
+
+      // Константи
+      const KINDERGARDEN_START = 3;
+      const CHILD = 6;
+      const PUPIL = 16;
+      const STUDENT = 24;
+      const WORKER = 65;
+
+      // Умова
+
+      let age = parseInt(prompt(`Введіть вік людини`,`число`));
+      let result;
+      // Розв'язання
+
+      if (age >= KINDERGARDEN_START && age < CHILD)
+      result = 'Дитина у садочку';
+      else if (age >= CHILD && age <= PUPIL)
+      result = 'Дитина у школі';
+      else if (age > PUPIL && age <= STUDENT)
+      result = 'Студент';
+      else if (age > STUDENT && age < WORKER)
+      result = 'Працююча людина';
+      else if (age >= WORKER)
+      result = 'Пенсіонер';
+      else if (age < KINDERGARDEN_START)
+      result = 'Дитина у віці до трьох років';
+
+      console.log(`Задача 4. Відповідь: ${result}`);
+    </script>
+
+  </head>
+  <body>
+    <p>Відповіді дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 3-го уроку</a>
+</body>
+</html>

@@ -93,9 +93,9 @@ text-align: left;
       const priceTwo = document.querySelector('.page__price2');
       const priceThree = document.querySelector('.page__price3');
 
-      const quentityOne = document.querySelector('.page__quantity1');
-      const quentityTwo = document.querySelector('.page__quantity2');
-      const quentityThree = document.querySelector('.page__quantity3');
+      const quantityOne = document.querySelector('.page__quantity1');
+      const quantityTwo = document.querySelector('.page__quantity2');
+      const quantityThree = document.querySelector('.page__quantity3');
 
       const totalOne = document.querySelector('.page__total1');
       const totalTwo = document.querySelector('.page__total2');
@@ -108,17 +108,17 @@ text-align: left;
       let priceOfItemFirst = Math.abs(parseFloat(prompt('Задача 6: ціна товару А =', 'number')));
       priceOne.textContent = priceOfItemFirst;
       let quantityOfItemFirst = Math.abs(parseFloat(prompt('Задача 6: кількість товару А =', 'number')));
-      quentityOne.textContent = quantityOfItemFirst;
+      quantityOne.textContent = quantityOfItemFirst;
 
       let priceOfItemSecond = Math.abs(parseFloat(prompt('Задача 6: ціна товару В =', 'number')));
       priceTwo.textContent = priceOfItemSecond;
       let quantityOfItemSecond = Math.abs(parseFloat(prompt('Задача 6: кількість товару В =', 'number')));
-      quentityTwo.textContent = quantityOfItemSecond;
+      quantityTwo.textContent = quantityOfItemSecond;
 
       let priceOfItemThird = Math.abs(parseFloat(prompt('Задача 6: ціна товару С =', 'number')));
       priceThree.textContent = priceOfItemThird
       let quantityOfItemThird = Math.abs(parseFloat(prompt('Задача 6: кількість товару С =', 'number')));
-      quentityThree.textContent = quantityOfItemThird;
+      quantityThree.textContent = quantityOfItemThird;
 
       let costOfItemFirst = priceOfItemFirst * quantityOfItemFirst;
       totalOne.textContent = costOfItemFirst.toFixed(2);

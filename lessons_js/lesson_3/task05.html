@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 06</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+    <script>
+
+
+      // Умова
+
+      let dayOfWeek = parseInt(prompt(`Введіть номер дня тижня від 0 до 6`,`число`));
+      let result;
+
+      // Розв'язання
+      switch (dayOfWeek) {
+        case 0:
+          result = 'Понеділок'
+          break;
+        case 1:
+          result = 'Вівторок'
+          break;
+          case 2:
+          result = 'Середа'
+          break;
+        case 3:
+          result = 'Четвер'
+          break;
+        case 4:
+          result = 'П\'ятниця'
+          break;
+        case 5:
+          result = 'Субота'
+          break;
+        case 6:
+          result = 'Неділя'
+          break;
+        default:
+          result = 'не день тижня'
+          break;
+      }
+
+      console.log(`Задача 6. Відповідь: Ви ввели ${result}`);
+    </script>
+
+  </head>
+  <body>
+    <p>Відповіді дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 3-го уроку</a>
+</body>
+</html>

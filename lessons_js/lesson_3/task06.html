@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 07</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+    <script>
+
+
+      // Умова
+
+      let monthNumber = parseInt(prompt(`Введіть номер дня тижня від 0 до 11`,`число`));
+      let result;
+
+
+      // Розв'язання
+
+      if(monthNumber === 0 || monthNumber === 1 || monthNumber === 2)
+      result =`Winter`;
+      else if(monthNumber === 3 || monthNumber === 4 || monthNumber === 5)
+      result =`Spring`;
+      else if(monthNumber === 6 || monthNumber === 7 || monthNumber === 8)
+      result =`Summer`;
+      else if(monthNumber === 9 || monthNumber === 10 || monthNumber === 11)
+      result =`Autum`;
+      else if(monthNumber < 0 || monthNumber > 11)
+      result =`ні до чого`;
+
+      console.log(`Задача 7. Відповідь: Ви ввели місяць, що належить до ${result}`);
+
+    </script>
+
+  </head>
+  <body>
+    <p>Відповіді дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 3-го уроку</a>
+</body>
+</html>

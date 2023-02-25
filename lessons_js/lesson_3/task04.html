@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 05</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+    <script>
+
+
+      // Умова
+
+      let drivingLicence = (prompt(`Введіть категорію прав латинницею`,`літера`)).toLowerCase();
+      let result;
+
+      // Розв'язання
+      switch (drivingLicence) {
+        case 'a':
+          result = 'мотоциклом'
+          break;
+        case 'b':
+          result = 'легковим автомобілем'
+          break;
+          case 'c':
+          result = 'вантажним автомобілем'
+          break;
+        default:
+          result = 'нічим'
+          break;
+      }
+
+      console.log(`Задача 5. Відповідь: Ви маєте право керувати ${result}`);
+    </script>
+
+  </head>
+  <body>
+    <p>Відповіді дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 3-го уроку</a>
+</body>
+</html>

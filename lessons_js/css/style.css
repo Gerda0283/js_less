@@ -11,6 +11,7 @@ body {
   border: 1px solid black;
   border-spacing: 7px 5px;
   border-collapse: collapse;
+  padding: 15px 15px 0;
 }
 
 .page__th, .page__td {
@@ -34,4 +35,16 @@ body {
 .page__item {
 
   text-align: left;
+}
+
+small {
+
+  font-weight: 300;
+  color: gray;
+}
+
+.page__breadcrumb {
+
+  display: inline-block;
+  margin-top: 15px;
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 2. task 02</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__table {
+
+width: 50%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+    <script>
+
+      // Константи
+      const BET_AMOUNT = 4;
+      // Умова
+      let price = Math.abs(parseFloat(prompt('Задача 2: Ціна товару:', 'грн')));
+      let moneyQuantity = Math.abs(parseInt(prompt('Задача 2: кількість грошей у покупця:', 'грн')));
+
+      // Розв'язання
+
+      let amountAfterBuying = moneyQuantity - price;
+      let amountAfterByyingAndBet = amountAfterBuying - BET_AMOUNT;
+
+      if(price > moneyQuantity)
+      console.log(`Задача 2: у Вас немає грошей на цей товар`);
+      else if(amountAfterByyingAndBet > BET_AMOUNT)
+      console.log(`Задача 2: Дякуємо за покупку, візміть, будь-ласка, лотерейний білет за ${BET_AMOUNT} грн`);
+      else if(amountAfterByyingAndBet === 0 || amountAfterByyingAndBet < 0 || amountAfterByyingAndBet < BET_AMOUNT)
+      console.log(`Задача 2: Дякуємо за покупку. Якщо буде бажання, пограйте в лотерею наступного разу`);
+
+    </script>
+
+  </head>
+  <body>
+    <p>Відповіді дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 3-го уроку</a>
+</body>
+</html>
