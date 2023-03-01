@@ -194,3 +194,40 @@ const WEEK_DAYS = 7;
 
 // let weekOfDaysAfter = ((dayOfWeek - FIRST_DAY_OF_WEEK + daysAfter) % (WEEK_DAYS - FIRST_DAY_OF_WEEK + COUNTER)) + FIRST_DAY_OF_WEEK;
 // console.log(`(14) Відповідь: Через ${daysAfter} днів буде ${weekOfDaysAfter} день`);
+
+// Alternative coditional
+
+/*33. Вычислите x−y√−−−−−−√, если x и y вводит пользователь. Перед вычислением выполнить проверку на существование квадратных корней.*/
+
+// let x = parseInt(prompt('Введіть число X', 'number'));
+// let y = parseInt(prompt('Введіть число Y', 'number'));
+// let a, b, c;
+// if((Math.sqrt(x) % 1) === 0)
+  
+//   console.log(Math.ceil(Math.sqrt(x)));
+
+//     else if ((Math.sqrt(y) % 1) === 0)
+        
+//         console.log(Math.ceil(Math.sqrt(y)));
+
+//           else {
+//            console.log(Math.ceil(Math.sqrt(x)));
+//            console.log(Math.ceil(Math.sqrt(y)));
+//           }
+
+//(1)
+// let D = b * b - 4 * a * c;
+
+//  if (D < 0) {
+//    console.log (`Корней нет`);
+//  } else
+//  if (D === 0) {
+//    x = -b / (2 * a);
+//    console.log (`Корень равен ${x}`);
+//  } else
+//  if (D > 0) {
+//    x = (-b + Math.sqrt(D)) / (2 * a);
+//    y = (-b - Math.sqrt(D)) / (2 * a);
+//    console.log (`Первый корень равен ${x}, второй корень равен ${x2}`);
+//  }
+

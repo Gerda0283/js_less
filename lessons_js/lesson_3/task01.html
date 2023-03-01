@@ -53,18 +53,21 @@ text-align: left;
       // Умова
       let price = Math.abs(parseFloat(prompt('Задача 2: Ціна товару:', 'грн')));
       let moneyQuantity = Math.abs(parseInt(prompt('Задача 2: кількість грошей у покупця:', 'грн')));
-
+      let sellerAnswer;
       // Розв'язання
 
-      let amountAfterBuying = moneyQuantity - price;
-      let amountAfterByyingAndBet = amountAfterBuying - BET_AMOUNT;
-
       if(price > moneyQuantity)
-      console.log(`Задача 2: у Вас немає грошей на цей товар`);
-      else if(amountAfterByyingAndBet > BET_AMOUNT)
-      console.log(`Задача 2: Дякуємо за покупку, візміть, будь-ласка, лотерейний білет за ${BET_AMOUNT} грн`);
-      else if(amountAfterByyingAndBet === 0 || amountAfterByyingAndBet < 0 || amountAfterByyingAndBet < BET_AMOUNT)
-      console.log(`Задача 2: Дякуємо за покупку. Якщо буде бажання, пограйте в лотерею наступного разу`);
+      sellerAnswer = `Задача 2: у Вас немає грошей на цей товар`;
+      else {
+        let amountAfterBuying = moneyQuantity - price;
+        let amountAfterByyingAndBet = amountAfterBuying - BET_AMOUNT;
+        if(amountAfterByyingAndBet > BET_AMOUNT)
+        sellerAnswer = `Задача 2: Дякуємо за покупку, візьміть, будь-ласка, лотерейний білет за ${BET_AMOUNT} грн`;
+        else
+      // if(amountAfterByyingAndBet === 0 || amountAfterByyingAndBet < 0 || amountAfterByyingAndBet < BET_AMOUNT)
+        sellerAnswer = `Задача 2: Дякуємо за покупку. Якщо буде бажання, пограйте в лотерею наступного разу`;
+      }
+console.log(sellerAnswer);
 
     </script>
 
