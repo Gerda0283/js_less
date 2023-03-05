@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 5. task 07</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__block {
+
+  display: flex;
+  margin: 0 auto;
+  padding: 2em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.page__table {
+
+flex-basis: 30%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+  </head>
+  <body>
+    <section class="page__block">
+
+    </section>
+    <p>Відповіді дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 5-го уроку</a>
+
+    <script>
+
+      // Умова
+      const breakConditionNumber = 25;
+
+      const pageSection = document.querySelector('.page__block');
+
+      let quantityOfTextBlocks = parseInt(prompt(`Введіть кількість абзаців на сторінці`, 'number'));
+      let div;
+      let headlineFirstLevel;
+      let paragraph;
+      let counter = 0;
+
+      // Розв'язання
+      for (let h = 0; h <= quantityOfTextBlocks-1; h++) {
+
+        let innerCounter = (counter+1)+h;
+
+        div = document.createElement('div');
+        div.classList.add('page__text-block');
+        pageSection.append(div);
+
+        headlineFirstLevel = document.createElement('h1');
+        headlineFirstLevel.textContent = `Заголовок ${innerCounter}`
+        div.append(headlineFirstLevel);
+
+          for(let i = 0; i < innerCounter; i++) {
+
+            paragraph = document.createElement('p');
+            paragraph.textContent = `Розділ ${innerCounter}. Параграф ${i+1}`;
+            div.append(paragraph);
+
+          }
+        if (quantityOfTextBlocks > breakConditionNumber) break;
+      }
+    </script>
+</body>
+</html>

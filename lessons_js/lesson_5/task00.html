@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="page" lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 5. task 01</title>
+
+    <style>
+body {
+
+font-family: sans-serif;
+font-size: 14px;
+font-weight: 400;
+}
+
+.page__block {
+
+display: flex;
+margin: 0 auto;
+padding: 2em 0;
+justify-content: center;
+flex-wrap: wrap;
+gap: 2em;
+}
+
+.page__table {
+
+flex-basis: 30%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+
+.page__list {
+  display: flex;
+  justify-content: flex-start;
+  gap:2.1428rem;
+  flex-wrap: wrap;
+}
+.page__list-item {
+  flex-basis: content;
+}
+    </style>
+
+  </head>
+  <body>
+    <h1>Задача 1</h1>
+    <div class="page__block">
+
+    </div>
+    <a href="./index.html">Назад: до списку задач 5-го уроку</a>
+
+    <script>
+
+      // Умова
+      const MIN_ELEMENT = 1;
+      const MAX_ELEMENT = 100;
+
+      // Розв'язання
+      let breakConditionNumber = 50;
+      let quantityOfListItems = parseInt(prompt(`Введіть кількість елементів маркованого списку`, 'number'));
+
+      if(!isNaN(quantityOfListItems) && quantityOfListItems !== 0) {
+
+        const listBlock = document.querySelector('.page__block');
+        let elem = document.createElement('ul');
+        listBlock.append(elem);
+        elem.classList.add('page__list')
+
+        let elemOfListRandom;
+        let i = 0;
+
+
+        do {
+          elemOfListRandom = MIN_ELEMENT + Math.floor(Math.random() * (MAX_ELEMENT - MIN_ELEMENT + 1));
+
+          let childElem = document.createElement('li');
+          elem.classList.add('page__list-item')
+          childElem.style.listStyleType = 'circle';
+          childElem.textContent = elemOfListRandom.toString();
+          elem.append(childElem);
+
+          i++;
+
+          if (i > breakConditionNumber)
+            break;
+
+        } while (i < quantityOfListItems);
+    } else console.log(`Введіть, будь-ласка, дійсне число більше нуля`);
+    </script>
+</body>
+</html>

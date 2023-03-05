@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 5. task 12</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__block {
+
+  display: flex;
+  margin: 0 auto;
+  padding: 2em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.page__table {
+
+flex-basis: 30%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+  </head>
+  <body>
+    <section class="page__block">
+
+    </section>
+    <p>Відповідь дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 5-го уроку</a>
+
+    <script>
+
+      // Умова
+      const minNumber = 1;
+      const maxNumber = 4;
+      const scrolls = 3;
+      let oneScroll = 0;
+      let oneFruit = 0;
+      let twoFruit = 0;
+      let threeFruit = 0;
+      let fourFruit = 0;
+      let winCombination;
+
+      // Розв'язання
+      for(let i=0; i <= scrolls-1; i++) {
+
+        let scrollResult = Math.floor(minNumber + Math.random() * (maxNumber - minNumber + 1));
+
+        console.log(scrollResult);
+
+      switch (scrollResult) {
+          case 1: oneFruit++;
+          break;
+          case 2: twoFruit++;
+          break;
+          case 3: threeFruit++;
+          break;
+          case 4: fourFruit++;
+          break;
+        }
+      }
+
+      if (oneFruit === 3) winCombination = 'Ви виграли 100грн'
+        else if (twoFruit === 3) winCombination = 'Ви виграли 200грн'
+          else if (threeFruit === 3) winCombination = 'Ви виграли 500грн'
+            else if (fourFruit === 3) winCombination = 'Ви виграли 1000грн'
+              else winCombination = 'нічого не виграли'
+
+                console.log(winCombination);
+
+    </script>
+
+</body>
+</html>

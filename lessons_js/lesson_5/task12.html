@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 5. task 13</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__block {
+
+  display: flex;
+  margin: 0 auto;
+  padding: 2em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.page__table {
+
+flex-basis: 30%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+  </head>
+  <body>
+    <section class="page__block">
+
+    </section>
+    <p>Відповідь дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 5-го уроку</a>
+
+    <script>
+
+      // Умова
+      const minNumber = 1;
+      let nSide = parseInt(prompt(`Введіть розмір поля`, 'number'));
+      let mSide = parseInt(prompt(`Введіть розмір поля`, 'number'));
+      let kBullets = parseInt(prompt(`Введіть кількість снарядів`, 'number'));
+      let nResult = 0;
+      let mResult = 0;
+      let result;
+      let i = 0
+
+      // Розв'язання
+      do {
+        
+        nResult = Math.floor(minNumber + Math.random() * (nSide - minNumber + 1));
+        mResult = Math.floor(minNumber + Math.random() * (mSide - minNumber + 1));
+        console.log(nResult);
+        console.log(mResult);
+        result = nResult === mResult ? `killed` : `missed`;
+
+        if(result === `killed`)
+        break;
+          else
+            i++;
+
+      } while (i < kBullets-1);
+
+      console.log(result);
+
+    </script>
+
+</body>
+</html>

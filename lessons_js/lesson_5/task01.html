@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 5. task 02</title>
+
+    <style>
+
+
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__block {
+
+display: flex;
+margin: 0 auto;
+padding: 2em 0;
+justify-content: center;
+flex-wrap: wrap;
+gap: 2em;
+}
+
+.page__table {
+
+flex-basis: 30%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+
+.page__list {
+  display: flex;
+  justify-content: flex-start;
+  gap:2.1428rem;
+  flex-wrap: wrap;
+}
+.page__list-item {
+  flex-basis: content;
+}
+    </style>
+
+  </head>
+  <body>
+
+    <form class="page__form" action="">
+      
+    </form>
+
+    <a href="./index.html">Назад: до списку задач 5-го уроку</a>
+
+    <script>
+
+      // Константи
+      const INPUT_QUANTITY = 10;
+      // Умова
+      const form = document.querySelector('.page__form');
+
+      let span;
+      let initialInput;
+      let labelElement;
+
+      // Розв'язання
+      for (let i = 0; i < INPUT_QUANTITY; i++) {
+        span = document.createElement('span');
+        labelElement = document.createElement('label');
+        labelElement = document.createElement('label');
+        labelElement.setAttribute('for', 'price');
+        initialInput = document.createElement('input');
+        initialInput.setAttribute('type', 'number');
+        initialInput.setAttribute('id', 'price');
+        initialInput.setAttribute('name', 'price');
+        initialInput.setAttribute('value', 'price');
+        initialInput.setAttribute('placeholder', 'price');
+        
+        form.append(span);
+        span.append(initialInput);
+        span.append(labelElement);
+
+        form.style.display = 'flex';
+        form.style.flexDirection = 'column';
+        form.style.maxWidth = '30%';
+        form.style.gap = '1em';
+        form.style.margin = '0 auto';
+
+        labelElement.textContent = `Product # ${i+1}`;
+        labelElement.style.fontSize = '0.8em';
+        labelElement.style.textTransform = 'capitalize';
+
+        span.style.display = 'flex';
+        span.style.flexDirection = 'column';
+
+        initialInput.style.minHeight = '2em';
+      }
+
+    </script>
+</body>
+</html>
