@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Daria Germash. Exercises. lesson 5. task 14</title>
+    <title>JS Daria Germash. Exercises. lesson 7. task 9</title>
 
     <style>
       body {
@@ -62,37 +62,27 @@ text-align: left;
 
     </section>
     <p>Відповідь дивитись у консолі</p>
-    <a href="./index.html">Назад: до списку задач 5-го уроку</a>
+    <a href="./index.html">Назад: до списку задач 7-го уроку</a>
 
     <script>
 
       // Умова
-      let maxSum = parseInt(prompt(`Введіть суму до сплати`, 'number'));
-      let result = 0;
-      let rest = 0;
-      let sumCounter = 0
-      let i = 0;
+      const tempQuantity = 7;
 
       // Розв'язання
-      do {
-        result = parseInt(prompt(`Введіть суму до погашення`, 'number'));
-        sumCounter += result;
-        console.log(`you have paid ${result}`);
-        console.log(`we've got = ${sumCounter}`);
 
-        if (sumCounter === maxSum) {
-          console.log(`paid`);
-
-        } else if (sumCounter > maxSum) {
-            rest = sumCounter - maxSum;
-            console.log(`please take your payback ${rest}`);
-
-        } else if (sumCounter < maxSum) {
-            rest = maxSum - sumCounter;
-            console.log(`please pay the rest ${rest}`);
+      function getNegativeTemperatureArray(quantity) {
+        let negativeArr = [];
+        for (let i = 0; i <= quantity; i++) {
+          let temp = parseInt(prompt(`Введіть значення темпереатури`, 'number'));
+          if (temp < 0)
+          negativeArr.push(temp);
         }
-        i++;
-      } while (sumCounter < maxSum);
+        return negativeArr;
+      }
+
+      const negativeArray = getNegativeTemperatureArray(tempQuantity);
+      console.log(`Negative temperatures are ${(negativeArray).join(',')}`);
 
     </script>
 

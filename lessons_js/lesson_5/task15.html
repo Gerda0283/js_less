@@ -69,19 +69,26 @@ text-align: left;
       // Умова
 
       let weekQuantity = parseInt(prompt(`Введіть кількість тижнів`, 'number'));
-      let summaryDays = weekQuantity * 7
-      let dayProfit = 0
       let resultProfit = 0;
-      let i = 0;
 
       // Розв'язання
-      while (i < summaryDays) {
-        let dayProfit = parseInt(prompt(`Введіть показник прибутку за день`, 'number'));
-        resultProfit += dayProfit
-        console.log(`Day's profit is ${dayProfit} UAH`);
-        i++
+      for(let i = 0; i < weekQuantity; i++) {
+
+        let weekResult = 0
+
+        for(let j = 0; j < 7; j++) {
+
+          let profitPerDay = parseInt(prompt(`Введіть кількість UAH`, 'number'));
+          console.log(profitPerDay);
+          weekResult+=profitPerDay;
+        }
+
+        console.log(`profit ${i+1} per week = ${weekResult}`)
+
+        resultProfit += weekResult;
       }
-      console.log(`Period's profit is ${resultProfit} UAH`);
+      console.log(`total profit per ${weekQuantity} weeks = ${resultProfit}`)
+
 
     </script>
 

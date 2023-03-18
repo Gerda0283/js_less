@@ -77,14 +77,11 @@ text-align: left;
       // Розв'язання
 
 
-    for(let i = minNumber; i <= maxNumber; i++) {
+    for(let i = minNumber; i <= maxNumber && oddCounter < oddQuantity; i++) {
       if(i % 2 !== 0) {
-        let oddNumber = i;
-        if (i >= oddCounter && oddCounter < oddQuantity) {
-          oddSum += oddNumber;
+          oddSum += i;
           oddCounter++
-          console.log(oddNumber)
-        }
+          console.log(i)
       }
     }
 

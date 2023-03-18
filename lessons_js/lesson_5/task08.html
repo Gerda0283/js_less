@@ -71,19 +71,15 @@ text-align: left;
       let minNumber = parseInt(prompt(`Введіть мінімальне число діапазону`, 'number'));
       let maxNumber = parseInt(prompt(`Введіть максимальне число діапазону`, 'number'));
       let userNumber = parseInt(prompt(`Загадайте число що належить до введеного Вами диапазону`, 'number'));
-      let gessNumber = 0;
-      let counterEtempts = Infinity;
-      
-      // Розв'язання
-      for(let i = 0; i < counterEtempts; i++) {
-        
-        let compNumber = Math.floor(minNumber + Math.random() * (maxNumber - minNumber + 1));
+      let compNumber = 0;
 
-        if (window.confirm(`Is ${compNumber} is true and matches with ${userNumber}?`)) {
+      do {
+        compNumber = Math.floor(minNumber + Math.random() * (maxNumber - minNumber + 1));
+
+        if (window.confirm(`Is ${compNumber} is true and matches with ${userNumber}?`))
           console.log(`${compNumber} is true and matches with ${userNumber}`);
-          break;
-        } else continue;
-      }
+
+      } while (compNumber !== userNumber)
 
     </script>
 </body>

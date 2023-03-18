@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 7. task 07</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__block {
+
+  display: flex;
+  margin: 0 auto;
+  padding: 2em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.page__table {
+
+flex-basis: 30%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+  </head>
+  <body>
+    <section class="page__block">
+
+    </section>
+    <p>Відповіді дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 7-го уроку</a>
+
+    <script>
+
+      // Умова
+
+      let numberOfRows = parseInt(prompt("Введіть кількість рядків таблиці", "number"));
+      let numberOfCells = parseInt(prompt("Введіть кількість рядків таблиці", "number"));
+
+      const div = document.querySelector('.page__block');
+      const initialTable = document.createElement('table')
+      initialTable.classList.add('page__table');
+      div.append(initialTable);
+
+      function initTable(row, cell) {
+        
+        for (let i = 0; i < row; i++) {
+
+          initialRow = document.createElement('tr');
+          initialTable.append(initialRow);
+
+          for (let j = 0; j < cell; j++) {
+
+            initialTableCell = document.createElement('td');
+            initialTableCell.classList.add('page__td')
+            initialRow.append(initialTableCell);
+            initialTableCell.textContent = `текст ${j+1}`
+          }
+        }
+      }
+
+      const readyTable = initTable(numberOfRows, numberOfCells)
+
+      // Розв'язання
+
+    </script>
+</body>
+</html>

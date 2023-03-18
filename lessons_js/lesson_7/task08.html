@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 7. task 8</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__block {
+
+  display: flex;
+  margin: 0 auto;
+  padding: 2em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.page__table {
+
+flex-basis: 30%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+  </head>
+  <body>
+    <section class="page__block">
+
+    </section>
+    <p>Відповіді дивитись у консолі</p>
+    <a href="./index.html">Назад: до списку задач 7-го уроку</a>
+
+    <script>
+
+      // Умова
+
+      const section = document.querySelector('.page__block');
+
+      function getBaner() {
+        let wraper = document.createElement('div');
+        wraper.style.display = 'flex';
+        wraper.style.justifyContent = 'center';
+        wraper.classList.add('page__baner');
+        let elem = document.createElement('a');
+        elem.classList.add('page__image');
+        elem.href = 'index.html';
+        elem.style.position = 'relative';
+        elem.style.background = 'linear-gradient(253deg, rgba(0,0,0,1) 15%, rgba(114,118,120,1) 100%)';
+        let img = document.createElement('img');
+        img.style.maxWidth = '100%';
+        img.style.maxHeight = 'auto';
+        img.src = `img/baner.png`;
+        let paragraph = document.createElement('p');
+        paragraph.style.fontFamily = 'sans-serif'
+        paragraph.style.fontSize = '50px'
+        paragraph.style.color = 'white';
+        paragraph.style.position = 'absolute';
+        paragraph.style.textAlign = 'right';
+        paragraph.style.top = '-10px';
+        paragraph.style.right = '50px';
+        paragraph.style.width = '300px';
+        paragraph.style.textTransform = 'uppercase';
+        paragraph.style.fontWeight = 'bold';
+        paragraph.textContent = 'Around the world';
+        let paragraphTwo = document.createElement('p');
+        paragraphTwo.style.color = 'white';
+        paragraphTwo.style.fontFamily = 'sans-serif';
+        paragraphTwo.style.position = 'absolut';
+        paragraphTwo.style.fontSize = '18px';
+        paragraphTwo.style.lineHeight = '1.6';
+        paragraphTwo.style.position = 'absolute';
+        paragraphTwo.style.top = '210px';
+        paragraphTwo.style.right = '50px';
+        paragraphTwo.style.width = '200px';
+        paragraphTwo.style.textAlign = 'right';
+        paragraphTwo.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius libero exercitationem labore deserunt amet?';
+        section.append(wraper);
+        wraper.append(elem);
+        elem.append(img); 
+        elem.append(paragraph);
+        elem.append(paragraphTwo);
+      };
+
+      getBaner();
+    </script>
+</body>
+</html>

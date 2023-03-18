@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Daria Germash. Exercises. lesson 7. task 04</title>
+
+    <style>
+      body {
+
+font-family: sans-serif;
+font-size: 14;
+font-weight: 400;
+}
+
+.page__block {
+
+display: flex;
+margin: 0 auto;
+padding: 2em 0;
+justify-content: center;
+flex-wrap: wrap;
+gap: 2em;
+}
+
+.page__table {
+
+flex-basis: 30%;
+border: 1px solid black;
+border-spacing: 7px 5px;
+border-collapse: collapse;
+}
+
+.page__th, .page__td {
+
+border: 1px solid #333;
+padding: 5px;
+box-sizing: border-box;
+vertical-align: middle;
+}
+
+.page__th {
+
+text-transform: capitalize;
+}
+
+.page__td {
+
+text-align: right;
+}
+
+.page__item {
+
+text-align: left;
+}
+    </style>
+
+  </head>
+  <body>
+    <div class="page__block">
+      <p>Задачу вирішено за умови, що трьохзначні числа зі знаком "-" не вважаються більшими за 100. Бо в умові задачі не вказано, що числа потрібно брати по модулю</p>
+
+    </div>
+    <!-- <p>Відповіді дивитись у консолі</p> -->
+    <a href="./index.html">Назад: до списку задач 7-го уроку</a>
+
+    <script>
+
+      const MORE_THAN_QUENTITY = 100;
+      // Умова
+      let numOne = parseInt(prompt(`Введіть перше число діапазону`, 'number'));
+      let numTwo = parseInt(prompt(`Введіть друге число діапазону`, 'number'));
+      let numThree = parseInt(prompt(`Введіть третє число діапазону`, 'number'));
+
+      console.log(numOne);
+      console.log(numTwo);
+      console.log(numThree);
+
+      // Розв'язання
+
+      function isEven(number) { return number % 2 === 0;}
+
+      // console.log(`Перше число парне ${isEven(numOne)} ?`)
+      // console.log(`Друге число парне ${isEven(numTwo)} ?`)
+      // console.log(`Третє число парне ${isEven(numThree)} ?`)
+
+      function isPositive(number) { return number > 0;}
+
+      // console.log(`Перше число додатне ${isPositive(numOne)} ?`)
+      // console.log(`Друге число додатне ${isPositive(numTwo)} ?`)
+      // console.log(`Третє число додатне ${isPositive(numThree)} ?`)
+
+      function isMoreThen(number) { return number > MORE_THAN_QUENTITY;}
+
+      // console.log(`Перше більше 100 ${isPositive(numOne)} ?`)
+      // console.log(`Друге більше 100 ${isPositive(numTwo)} ?`)
+      // console.log(`Третє більше 100 ${isPositive(numThree)} ?`)
+
+      function getEvenNumber(one, two, three) {
+        let evenNumber = 0;
+
+        let isEvenOne = isEven(one);
+        let isEvenTwo = isEven(two);
+        let isEvenThree = isEven(three);
+
+        if(isEvenOne && !isEvenTwo && !isEvenThree)
+        evenNumber+=1;
+        else if(!isEvenOne && isEvenTwo && !isEvenThree) 
+        evenNumber+=1;
+        else if(!isEvenOne && !isEvenTwo && isEvenThree) 
+        evenNumber+=1;
+        else if(isEvenOne && isEvenTwo && !isEvenThree) 
+        evenNumber+=2;
+        else if(!isEvenOne && isEvenTwo && isEvenThree) 
+        evenNumber+=2;
+        else if(isEvenOne && !isEvenTwo && isEvenThree) 
+        evenNumber+=2;
+        else if(isEvenOne && isEvenTwo && isEvenThree) 
+        evenNumber+=3;
+        else evenNumber = 0;
+
+        return evenNumber;
+      }
+
+      // console.log(`Answer (even) is ${getEvenNumber(numOne, numTwo, numThree)}`)
+
+      function getPositive(one, two, three) {
+        let posNumber = 0;
+
+        let isPosOne = isPositive(one);
+        let isPosTwo = isPositive(two);
+        let isPosThree = isPositive(three);
+
+        if(isPosOne && !isPosTwo && !isPosThree)
+        posNumber+=1;
+        else if(!isPosOne && isPosTwo && !isPosThree) 
+        posNumber+=1;
+        else if(!isPosOne && !isPosTwo && isPosThree) 
+        posNumber+=1;
+        else if(isPosOne && isPosTwo && !isPosThree) 
+        posNumber+=2;
+        else if(!isPosOne && isPosTwo && isPosThree) 
+        posNumber+=2;
+        else if(isPosOne && !isPosTwo && isPosThree) 
+        posNumber+=2;
+        else if(isPosOne && isPosTwo && isPosThree) 
+        posNumber+=3;
+        else posNumber = 0;
+
+        return posNumber;
+      }
+
+      // console.log(`Answer (positive) is ${getPositive(numOne, numTwo, numThree)}`)
+
+      function getBigNumber(one, two, three) {
+        let moreThanNumber = 0;
+
+        let isMoreOne = isMoreThen(one);
+        let isMoreTwo = isMoreThen(two);
+        let isMoreThree = isMoreThen(three);
+
+        if(isMoreOne && !isMoreTwo && !isMoreThree)
+        moreThanNumber+=1;
+        else if(!isMoreOne && isMoreTwo && !isMoreThree) 
+        moreThanNumber+=1;
+        else if(!isMoreOne && !isMoreTwo && isMoreThree) 
+        moreThanNumber+=1;
+        else if(isMoreOne && isMoreTwo && !isMoreThree) 
+        moreThanNumber+=2;
+        else if(!isMoreOne && isMoreTwo && isMoreThree) 
+        moreThanNumber+=2;
+        else if(isMoreOne && !isMoreTwo && isMoreThree) 
+        moreThanNumber+=2;
+        else if(isMoreOne && isMoreTwo && isMoreThree) 
+        moreThanNumber+=3;
+        else moreThanNumber = 0;
+
+        return moreThanNumber;
+      }
+
+      // console.log(`Answer (more than 100) is ${getBigNumber(numOne, numTwo, numThree)}`)
+
+      function multiple(one, two, three) {
+
+        let arr = [];
+        let evenNumber = getEvenNumber(one, two, three);
+        let posNumber = getPositive(one, two, three);
+        let moreThanNumber = getBigNumber(one, two, three);
+        arr.push(evenNumber, posNumber, moreThanNumber);
+        return arr;
+      }
+
+        console.log(`Answear is ${multiple(numOne, numTwo, numThree).toString()}`)
+
+
+    </script>
+</body>
+</html>

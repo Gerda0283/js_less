@@ -68,29 +68,36 @@ text-align: left;
 
       // Умова
       const minNumber = 1;
-      let nSide = parseInt(prompt(`Введіть розмір поля`, 'number'));
-      let mSide = parseInt(prompt(`Введіть розмір поля`, 'number'));
+      let nSide = parseInt(prompt(`Введіть розмір поля n`, 'number'));
+      let mSide = parseInt(prompt(`Введіть розмір поля m`, 'number'));
       let kBullets = parseInt(prompt(`Введіть кількість снарядів`, 'number'));
-      let nResult = 0;
-      let mResult = 0;
+      let nPosition = Math.floor(minNumber + Math.random() * (nSide - minNumber + 1));
+      let mPosition = Math.floor(minNumber + Math.random() * (mSide - minNumber + 1));
+          console.log(nPosition);
+          console.log(mPosition);
       let result;
       let i = 0
 
       // Розв'язання
       do {
-        
-        nResult = Math.floor(minNumber + Math.random() * (nSide - minNumber + 1));
-        mResult = Math.floor(minNumber + Math.random() * (mSide - minNumber + 1));
+        let nResult = parseInt(prompt(`Введіть номер клітинки однопалубного корабля по осі N`, 'number'));
+        let mResult = parseInt(prompt(`Введіть номер клітинки однопалубного корабля по осі M`, 'number'));
+
         console.log(nResult);
         console.log(mResult);
-        result = nResult === mResult ? `killed` : `missed`;
+        
+        if (nResult === nPosition && mResult === mPosition) {
+        result = `killed`
+        }
+          else  result = `missed`
+          console.log(result);
 
         if(result === `killed`)
         break;
           else
             i++;
 
-      } while (i < kBullets-1);
+      } while (i < kBullets);
 
       console.log(result);
 
